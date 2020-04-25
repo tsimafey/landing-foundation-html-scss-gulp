@@ -27,6 +27,11 @@ function imageMinify() {
         .pipe(gulp.dest('dist/img'))
 }
 
+function fonts() {
+  return gulp.src('src/assets/fonts/*')
+    .pipe(gulp.dest('dist/fonts'))
+}
+
 function styles() {
     return gulp.src('src/sass/**/*.scss')
       .pipe(sass())
@@ -50,6 +55,7 @@ exports.default = function serve(cb) {
     })
 
     gulp.watch('src/assets/images/**/*.{gif,png,jpg,svg,webp}', gulp.series(imageMinify)).on('change', server.reload)
+    gulp.watch('src/assets/fonts/*', gulp.series(fonts)).on('change', server.reload)
     gulp.watch('src/sass/**/*.scss', gulp.series(styles, cb => gulp.src('dist/css').pipe(server.stream()).on('end', cb)))
     gulp.watch('dist/*.html').on('change', server.reload)
 }
