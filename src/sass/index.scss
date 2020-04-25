@@ -1,3 +1,61 @@
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .header {
     background-color: #F3C6BD;
+    padding-top: 2.5rem;
+    &__menu-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 2.5rem;
+    }
+    &__nav-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2.5rem;
+        &-item {
+            display: inline;
+            &--with-arrow {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 0.7rem;
+                align-content: center;
+            }
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &__title {
+
+        }
+        &__description {
+            
+        }
+    }
+}
+
+.primary-button {
+    background-color: #3040C4;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
