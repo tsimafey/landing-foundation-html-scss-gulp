@@ -27,11 +27,6 @@ function imageMinify() {
         .pipe(gulp.dest('dist/img'))
 }
 
-function fonts() {
-  return gulp.src('src/assets/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
-}
-
 function styles() {
     return gulp.src('src/sass/**/*.scss')
       .pipe(sass())
