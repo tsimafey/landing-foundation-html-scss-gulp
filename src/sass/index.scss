@@ -7,6 +7,15 @@ body {
     color: $main-color;
 }
 
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
 .container {
     padding-left: 10%;
     padding-right: 10%;
@@ -48,6 +57,30 @@ body {
     }
     &__main-block {
         margin-top: 4.8rem;
+        position: relative;
+        z-index: 0;
+        height: 32rem;
+        &-left {
+            position: absolute;
+            z-index: 2;
+        }
+        &-first-button {
+            margin-right: 0.6rem;
+        }
+    }
+    &__title {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    &__text {
+        width: 38%;
+        margin-bottom: 3.6rem;
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        z-index: 1;
     }
 }
 
@@ -78,6 +111,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     &_blue {
         background-color: #3040C4;
