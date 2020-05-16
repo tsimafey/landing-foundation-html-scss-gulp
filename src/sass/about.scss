@@ -1,0 +1,22 @@
+@import 'variables';
+
+.about {
+    background-color: $secondary-bg-color;
+    &__block {
+        padding-top: 4.8rem;
+        padding-bottom: 4.8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__item {
+        padding-right: 3rem;
+    }
+    &__title {
+        margin-bottom: 1.2rem;
+    }
+    &__text {
+        font-size: 1.35rem;
+        line-height: 2.1rem;
+    }
+}
+

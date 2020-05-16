@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+@import 'variables';
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: $main-color;
+}
+
+.main-color-filter {
+    filter: invert(17%) sepia(7%) saturate(100%) hue-rotate(227deg) brightness(0) contrast(98%);
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 1rem;
+        font-size: 1.25rem;
+    }
+    &__title {
+        font-weight: 700;
+    }
+    &__description {
+        color: lighten($main-color, 40%);
+    }
+}
+
+.primary-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    &_blue {
+        background-color: #3040C4;
+        color: white;
+    }
+    &_white {
+        background-color: white;
+        color: #3040C4;
+    }
+}
