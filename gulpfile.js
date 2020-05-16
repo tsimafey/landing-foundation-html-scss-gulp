@@ -50,7 +50,6 @@ exports.default = function serve(cb) {
     })
 
     gulp.watch('src/assets/images/**/*.{gif,png,jpg,svg,webp}', gulp.series(imageMinify)).on('change', server.reload)
-    gulp.watch('src/assets/fonts/*', gulp.series(fonts)).on('change', server.reload)
     gulp.watch('src/sass/**/*.scss', gulp.series(styles, cb => gulp.src('dist/css').pipe(server.stream()).on('end', cb)))
     gulp.watch('dist/*.html').on('change', server.reload)
 }
